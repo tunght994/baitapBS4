@@ -1,6 +1,60 @@
+/* GLOBAL */
 body ,html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* HEADER */
+
+header .navbar-brand{
+    color : #189a46;
+    font-size: 2rem ;
+    font-weight: 600;
+}
+
+#poochNavbar .nav-link{
+    color: #000;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+#poochNavbar .nav-item::after,
+#poochNavbar .dropdown-item::after
+{
+    content: "";
+    width: 0;
+    height: 1px;
+    display: block;
+    background-color: #189a46;
+    transition: all .5s;
+}
+#poochNavbar .nav-item:hover::after,
+#poochNavbar .dropdown-item:hover::after{
+    width: 100%;
+    
+}
+#poochNavbar .nav-link:hover,
+#poochNavbar .dropdown-item:hover{
+    color: #189a46;
+    
+}
+#poochNavbar .nav-item.active .nav-link{
+    color: #189a46;
+}
+#poochNavbar .dropdown-menu{
+    padding-bottom: 16px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    position: absolute;
+    left: -35px;
+
+}
+
+#poochNavbar .dropdown-item{
+    padding: 6px 24px;
+    background-color: transparent;
+    margin-right: 40px;
+    display: block
 }
