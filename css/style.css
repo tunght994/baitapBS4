@@ -7,20 +7,30 @@ body ,html{
 }
 
 /* HEADER */
-
+header{
+    position: fixed;
+    z-index:999;
+    top: 30px;
+    width: 100vw;
+    background-color: #fff;
+}
 header .navbar-brand{
     color : #189a46;
     font-size: 2rem ;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #poochNavbar .nav-link{
     color: #000;
     font-size: 1.1rem;
     position: relative;
+    padding : 14px 0;
+    font-weight: 500;
 }
-
-#poochNavbar .nav-item::after,
+#poochNavbar .nav-item{
+    padding: 0 10px;
+}
+#poochNavbar .nav-link::after,
 #poochNavbar .dropdown-item::after
 {
     content: "";
@@ -30,13 +40,11 @@ header .navbar-brand{
     background-color: #189a46;
     transition: all .5s;
 }
-#poochNavbar .nav-item:hover::after,
+#poochNavbar .nav-link:hover::after,
 #poochNavbar .dropdown-item:hover::after{
     width: 100%;
-    
 }
-#poochNavbar .nav-link:hover,
-#poochNavbar .dropdown-item:hover{
+#poochNavbar .nav-link:hover{
     color: #189a46;
     
 }
@@ -49,12 +57,193 @@ header .navbar-brand{
     font-size: 1.1rem;
     position: absolute;
     left: -35px;
-
 }
 
 #poochNavbar .dropdown-item{
     padding: 6px 24px;
     background-color: transparent;
     margin-right: 40px;
-    display: block
+    display: block;
+    font-weight: 500;
+}
+
+#poochNavbar .nav-item i{
+    font-size: .9rem;
+}
+
+/* Light theme */
+#myBody{
+    background-color:black;
+  }
+  #switchButton {
+    margin-top: 13px;
+    margin-left: 5px;
+  }
+  #switchButton .fa-moon{
+    display: none;
+  }
+  #switchButton .fa-sun{
+    display: block;
+  }
+  
+  /* Dark Theme*/
+  .dark#myBody{
+    background-color:white;
+    
+  }
+  .dark #switchButton {
+    margin-top: 13px;
+    margin-left: 5px;
+    
+  }
+  .dark #switchButton .fa-moon {
+    display: block;
+    color: #000;
+    
+  }
+  
+  .dark #switchButton .fa-sun {
+    display: none;
+  }
+  .dark .card {
+    background-color: #000000;
+    color: white;
+  }
+/* CAROUSEL */
+.carousel{
+    position: relative;
+}
+.carousel .carousel__bg{
+    background-color: #000;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.carousel-item .carousel-caption{
+    text-align: left;
+    max-width: 700px;
+}
+.carousel-item .carousel__left{
+    top: 50%;
+    left: 50%;
+    transform: translate(-80% , -40%);
+}
+.carousel-item .carousel__right{
+    top: 50%;
+    right: 50%;
+    transform: translate(80% , -40%);
+}
+.carousel-item .carousel-caption h2{
+    font-size: 4rem;
+}
+.carousel-item .carousel-caption p{
+    font-size: 1.1rem;
+    opacity: .8;
+}
+.carousel-item .btn{
+    padding: 12px 35px;
+    font-size: 1rem;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-top: 48px;
+    border-radius: 10px;
+    margin-right: 7px;
+    transition: .5s;
+}
+.carousel-item .btn.btn-active{
+    background-color: #fff;
+    color: #189a46;
+}
+.carousel-item .btn:hover{
+    background-color: #fff;
+    color: #189a46;
+}
+#poochCarousel .carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#poochCarousel .carousel-indicators li::after{
+    content: '';
+    width: 0;
+    height: 100%;
+    display: block;
+}
+#poochCarousel .carousel-indicators li:hover::after{
+    width: 25px;
+    background-color: #09fa5d;
+    border: 1px solid #189a46;
+    border-radius: 10px;
+
+}
+
+/* ABOUT */
+.about .about__title{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.about .about__title h6{
+    color: #F53626;
+
+}
+.about .about__title h3{
+    font-size: 40px;
+}
+.about .about__title p{
+    opacity: .8;
+}
+.read-more{
+    color: #000;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #189a46;
+    font-weight: 600;
+    transition: .5s;
+    font-size: .9rem;
+}
+
+.read-more:hover{
+    text-decoration: none;
+    color: #189a46;
+}
+
+/* FEATURE */
+
+.feature{
+    background-color: rgba(147, 107, 232, 0.05) ;
+}
+
+.feature .fuature__item{
+    padding: 30px 30px;
+    background-color: #fff;
+    transition: .5s;
+    margin-bottom: 30px;
+}
+.feature .fuature__item i{
+    display: block;
+    color: #189a46;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+.fuature__item .title__head{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+.feature .fuature__item:hover{
+    background-color: rgba(147, 107, 232, 0.05);
+}
+.fuature__item .title__head:hover{
+    color: #189a46;
+}
+
+.feature .fuature__item p{
+    margin-top: 15px;
+    opacity: .9;
 }

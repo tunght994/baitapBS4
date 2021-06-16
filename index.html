@@ -20,10 +20,10 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body id="myBody">
   <header>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg bg-light py-3">
+    <div class="container py-2.5">
+      <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">Pooch Care</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#poochNavbar"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,9 +44,10 @@
               <a class="nav-link" href="#">Gallery</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
                 Blog
+                <i class="fa fa-angle-down"></i>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Blog Post</a>
@@ -55,7 +56,13 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+              <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Contact</a>
+            </li>
+            <li>
+              <button class="btn" id="switchButton" title="Click to switch theme">
+                <i class="far fa-sun"></i>
+                <i class="far fa-moon"></i>
+              </button>
             </li>
           </ul>
           <!-- <form class="form-inline my-2 my-lg-0">
@@ -67,9 +74,132 @@
     </div>
 
   </header>
-  <section class="carousel"></section>
-  <section class="about"></section>
-  <section class="project"></section>
+  <section class="carousel">
+    <div class="carousel__bg"></div>
+    <div id="poochCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#poochCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#poochCarousel" data-slide-to="1"></li>
+        <li data-target="#poochCarousel" data-slide-to="2"></li>
+        <li data-target="#poochCarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/banner1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption carousel__left container py-2.5">
+            <h2>Quality Things For Loving Pets</h2>
+            <p>Keeps your pets smiling</p>
+            <a href="#" class="btn btn-active">Read More</a>
+            <a href="#" class="btn">Contact Us</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/banner2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption carousel__right container d-none d-md-block">
+            <h2>Delevering Happiness For Pets</h2>
+            <p>We Help Your Projects</p>
+            <a href="#" class="btn btn-active">Read More</a>
+            <a href="#" class="btn">Contact Us</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/banner3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption carousel__left container d-none d-md-block">
+            <h2>Quality Things For Loving Pets</h2>
+            <p>Keeps your pets smiling</p>
+            <a href="#" class="btn btn-active">Read More</a>
+            <a href="#" class="btn">Contact Us</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/banner4.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption carousel__right container d-none d-md-block">
+            <h2>Delevering Happiness For Pets</h2>
+            <p>We Help Your Projects</p>
+            <a href="#" class="btn btn-active">Read More</a>
+            <a href="#" class="btn">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about container py-5">
+    <div class="about__title text-center py-5">
+      <h6>ABOUT US</h6>
+      <h3>We Love Your Pets Like They Are Our Own</h3>
+      <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur hic odio voluptatem tenetur
+        consequatur.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus
+        nunc, ut rhoncus turpis sodales quis.</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  </section>
+  <section class="feature">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-4">
+          <div class="fuature__item">
+            <i class="fa fa-snowflake"></i>
+            <a href="#" class="title__head">Dog Walking</a>
+            <p>Vivamus a ligula quam. Ut blandit eu leo non. Duis sed doloramet laoreet. Lorem ipsum dolor sit amet Ut
+              blandit eu leo.
+            </p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="fuature__item">
+            <i class="fa fa-utensils"></i>
+            <a href="#" class="title__head">Dog Walking</a>
+            <p>Vivamus a ligula quam. Ut blandit eu leo non. Duis sed doloramet laoreet. Lorem ipsum dolor sit amet Ut
+              blandit eu leo.
+            </p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="fuature__item">
+            <i class="fa fa-sign-language"></i>
+            <a href="#" class="title__head">Dog Walking</a>
+            <p>Vivamus a ligula quam. Ut blandit eu leo non. Duis sed doloramet laoreet. Lorem ipsum dolor sit amet Ut
+              blandit eu leo.
+            </p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="fuature__item">
+            <i class="fa fa-sitemap"></i>
+            <a href="#" class="title__head">Dog Walking</a>
+            <p>Vivamus a ligula quam. Ut blandit eu leo non. Duis sed doloramet laoreet. Lorem ipsum dolor sit amet Ut
+              blandit eu leo.
+            </p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="fuature__item">
+            <i class="fa fa-shower"></i>
+            <a href="#" class="title__head">Dog Walking</a>
+            <p>Vivamus a ligula quam. Ut blandit eu leo non. Duis sed doloramet laoreet. Lorem ipsum dolor sit amet Ut
+              blandit eu leo.
+            </p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="fuature__item">
+            <i class="fa fa-user-md"></i>
+            <a href="#" class="title__head">Dog Walking</a>
+            <p>Vivamus a ligula quam. Ut blandit eu leo non. Duis sed doloramet laoreet. Lorem ipsum dolor sit amet Ut
+              blandit eu leo.
+            </p>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -81,6 +211,14 @@
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
     crossorigin="anonymous"></script>
 
+  <script>
+    document.getElementById("switchButton").onclick = function () {
+      //khi button được click thì tìm đến thẻ body có id là myBody
+      // dùng classlist để gọi thuộc tính class của thẻ body
+      //Sử dụng toggle() để thêm hoặc xóa 1 class của thẻ html. Nếu thẻ body không có class dark thì toggle sẽ thêm class dark vào body. Ngược lại, nếu thẻ body đang có class dark thì toogle sẽ xóa class dark đi.
+    document.getElementById("myBody").classList.toggle("dark");
+    };
+  </script>
 </body>
 
 </html>
